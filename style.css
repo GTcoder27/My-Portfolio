@@ -1,0 +1,244 @@
+*{
+    /* padding: 0;
+    margin: 0; */
+}
+
+body{
+    background-color: rgb(10 34 54);
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+#navbar{
+    background-color: rgb(2 17 37);
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    font-weight: bold;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+.navbar1{
+    font-size: 27px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar2{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar2 ul{
+    display: flex;
+
+}
+.navbar2 ul li{
+    text-decoration: none;
+    list-style: none;
+    margin: 1vw;
+}
+#home{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15vh;
+}
+#home-left{
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home-left .inner{
+    width: 70%;
+    height: auto;
+}
+#home-left .inner span{
+    color: rgb(0, 229, 255);
+}
+.social{
+    display: flex;
+}
+.social .item{
+    width: 43px;
+    height: 43px;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    list-style: none;
+    margin:0.4vw;
+}
+.item a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: aqua;
+}
+.item a .fab{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: rgb(0, 0, 0);
+    transition: 0.5s ease;
+}
+.item a:hover .fab{
+    transform: rotateY(360deg);
+}
+#home-left .inner .but{
+    background-color:aqua;
+    margin: 30px 0px;
+    margin-right:30px ;
+    width: 150px;
+    height: 50px ;
+    border: 0px;
+    box-shadow: inset 0px 0px 12px rgb(0, 0, 0);
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 40px;
+    cursor: pointer;
+}
+#home-left .inner .but:hover{
+    box-shadow: 0px 0px 20px aqua;
+}
+#home-right{
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home-right .inner {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    border-radius: 50% ;
+    margin-left: -10vw;
+    border: 20px solid rgb(255, 255, 255);
+    box-shadow: inset 0px 0px 30px black;
+}
+#home-right .inner img{
+    width: 30vw;
+    border-radius: 50% ;
+    box-shadow: 40px 0px 70px rgb(0, 229, 255),
+    -40px 0px 70px rgb(0, 229, 255),
+    0px 40px 70px rgb(255, 1, 192),
+    0px -40px 70px rgb(255, 1, 192);
+}
+#about{
+    margin-top: 30vh;
+    width: 90vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+#about-left{
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#about-right{
+    width: 50%;
+    height: auto;
+}
+#about-left .inner {
+    width: auto;
+    height: auto;
+    padding: 1vw;
+    border-radius: 50% ;
+    border: 18px solid rgb(255, 255, 255);
+    box-shadow: inset 0px 0px 30px black;
+}
+#about-left .inner img{
+    width: 25vw;
+    border-radius: 50% ;
+    box-shadow: 40px 0px 70px rgb(0, 229, 255),
+    -40px 0px 70px rgb(0, 229, 255),
+    0px 40px 70px rgb(255, 1, 192),
+    0px -40px 70px rgb(255, 1, 192);
+}
+#about-right div span{
+    color: aqua;
+}
+#about-right .but{
+    background-color:aqua;
+    margin: 30px 0px;
+    margin-right:30px ;
+    width: 170px;
+    height: 50px ;
+    border: 0px;
+    box-shadow: inset 0px 0px 12px rgb(0, 0, 0);
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 40px;
+    cursor: pointer;
+}
+#about-right .but:hover{
+    box-shadow: 0px 0px 20px aqua;
+}
+#projects{
+    margin-top: 25vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#projects .p-inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#projects .p-inner span{
+    color: aqua;
+}
+.pros{
+    border: 2px solid red;
+    /* width: 90%; */
+    height: auto;
+    display: flexbox;
+    
+}
+.pro{
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgb(195, 195, 195);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
