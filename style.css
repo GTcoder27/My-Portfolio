@@ -53,6 +53,7 @@ body{
     align-items: center;
     justify-content: center;
     margin-top: 15vh;
+    
 }
 #home-left{
     width: 50%;
@@ -214,22 +215,122 @@ body{
     color: aqua;
 }
 .pros{
-    border: 2px solid red;
-    /* width: 90%; */
+    /* border: 2px solid red; */
+    width: 80%;
     height: auto;
-    display: flexbox;
-    
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: space-around;
+    /* align-items: center; */
+    align-content: center;
+    gap: 3vw 10vh;
 }
 .pro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 300px;
-    height: 300px;
-    border: 2px solid rgb(195, 195, 195);
-
+    height: 250px;
+    /* border: 2px solid rgb(195, 195, 195); */
+}
+.pro .pro-but{
+    background-color:aqua;
+    background:linear-gradient(aqua,rgb(23, 143, 255)) ;
+    width: 170px;
+    height: 50px ;
+    border: 0px;
+    box-shadow: inset 0px 0px 12px rgb(0, 0, 0);
+    font-size: 1.02rem;
+    font-weight: bold;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.pro .pro-but:hover{
+    box-shadow: 0px 0px 10px aqua;
+}
+.pro div{
+    width: 100%;
+    height: 80%;
+    margin-bottom: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    /* border: 2px solid rgb(239, 210, 157); */
+    box-shadow: inset 0px 0px 20px rgb(255, 255, 255);
+}
+.pro video{
+    max-width: 90%;
+    height: auto;
+    display: block;
+    outline: none;
+    border: 0px;
+    border-radius: 10px;
+}
+.pro video::-webkit-media-controls {
+    display:none ;
+}
+#contact{
+    display: flex;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap:wrap ; */
+    width: 100vw;
+    height: auto;
+    /* border: 2px solid red; */
+}
+#contact-left{
+    width: 50%;
+    height: auto;
+    padding-left: 20px;
+    /* border: 2px solid red; */
+}
+#contact-left h2{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    /* border: 2px solid red; */
+}
+#contact-left h2 span{
+    color: aqua;
+}
+#contact-left p{
+    color: rgb(152, 161, 151);
+}
+#contact-left .social{
+    margin-top: 5vh;
+}
+#contact-left img{
+    width: 20px;
+    height: 20px;
+    background-color: aliceblue;
+}
+.email{
+    display: flex;
+    align-content: center;
+    gap: 6px;
+}
+.mobile-no{
+    gap: 6px;
+    display: flex;
+    align-content: center;
 }
 
 
 
 
+#contact-right{
+    width: 50%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+}
 
 
 
