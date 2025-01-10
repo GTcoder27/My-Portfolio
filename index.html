@@ -1,181 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+
+    <title>Portfolio Website</title>
+
 </head>
-<body>
-    <div id="navbar">
-        <div class="navbar1">
-            Girish Nandanwar
-        </div>
-        <div class="navbar2">
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Services</li>
-                <li>Skills</li>
-                <li>Projects</li>
-                <li>Contact</li>
-            </ul>
-        </div>
-    </div>
 
-    <div id="home">
-        <div id="home-left">
-            <div class="inner">
-                <h2>Hello, It's Me</h2>
-                <h1>Girish Vijay Nandanwar</h1>
-                <h2>And I'am a <span>Web Developer</span></h2>
-                <p>I am a Web Developer.Currently persuing B.Tech in Yeshwantrao Chavan College of Engineering(YCCE), Nagpur</p>
-                <div class="social">
-                    <li class="item">
-                        <a href="#">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a href="#">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a href="#">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a href="#">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </li>
-                </div>
-                <a href="#about"><button class="but">About Me</button></a>
-                <a download="enterfilename" title="Download"><button class="but">Resume</button></a>
+<body class="min-h-screen text-white ">
+
+
+    <!-- HEADER -->
+    <header id="header" class="py-4 bg-opacity-50 backdrop-blur-md fixed w-full z-10 scroll-smooth shadow-md "
+        style="box-shadow: 0 4px 30px rgba(255, 255, 255, 0.5);">
+        <nav class="container mx-auto flex justify-between items-center px-4 lg:px-0">
+            <a href="#" class="text-2xl font-bold">Girish Nandanwar</a>
+            <div id="head" class="hidden md:flex space-x-6 font-bold">
+                <a href="#home" class="hover:text-indigo-300">Home</a>
+                <a href="#about" class="hover:text-indigo-300">About</a>
+                <a href="#skills" class="hover:text-indigo-300">Skills</a>
+                <a href="#work" class="hover:text-indigo-300">Work</a>
+                <a href="#contact" class="hover:text-indigo-300">Contact</a>
             </div>
-        </div>
-        <div id="home-right">
-            <div class="inner">
-                <img src="my2.png" alt="">
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-2xl">
+                    <i class="fa fa-bars"></i>
+                </button>
             </div>
-        </div>
-    </div>
-
-    
-
-    <div id="about">
-        <div id="about-left">
-            <div class="inner">
-                <img src="my2.png" alt="">
-            </div>
-        </div>
-        <div id="about-right">
-            <div>
-                <h1>About <span>Me</span></h1>
-                <h2>Full stack Developer</h2>
-            </div>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores soluta labore voluptatum odio numquam alias qui impedit ipsa eligendi iusto libero tempora delectus ducimus consequuntur asperiores inventore est veritatis sed quae, harum magni omnis vel. Quia rem aspernatur, atque amet consequuntur ad ratione illo ex? Tempore hic excepturi ipsum quasi. Dolorem dolore animi accusamus suscipit perspiciatis placeat corporis repudiandae sapiente quidem quaerat eligendi consequuntur excepturi possimus rerum quasi sit dolor vero cumque itaque ea, ipsa, voluptas expedita! Adipisci corrupti eveniet veniam, quae optio voluptas? Ullam deleniti dicta, aut quidem cupiditate accusantium voluptatibus, magnam magni veritatis odio dolorum laboriosam molestiae? Illum.</p>
-            <button class="but">More about me</button>
-        </div>
-    </div>
+        </nav>
+    </header>
 
 
 
 
 
-    <div id="projects">
-        <div class="p-inner">
-            <h1>My <span>Projects</span></h1>
-            <div class="pros">
-                <div class="pro" id="TikTacToe">
-                    <div><video autoplay loop muted src="videos/tictactoe.mp4"></video></div>
-                    <a target="_blank" href="TicTacToe\index.html"><button class="pro-but">Want to try?</button></a>
-                </div>
-                <div class="pro" id="pro2">
-                    <div><img src="" alt=""></div>
-                    <a href=""><button class="pro-but">Want to try?</button></a>
-                </div>
-                <div class="pro" id="pro3">
-                    <div><img src="" alt=""></div>
-                    <a href=""><button class="pro-but">Want to try?</button></a>
-                </div>
-                <div class="pro" id="pro4">
-                    <div><img src="" alt=""></div>
-                    <a href=""><button class="pro-but">Want to try?</button></a>
-                </div>
-                <div class="pro" id="pro5">
-                    <div><img src="" alt=""></div>
-                    <a href=""><button class="pro-but">Want to try?</button></a>
-                </div>
-                <div class="pro" id="pro6">
-                    <div><img src="" alt=""></div>
-                    <a href=""><button class="pro-but">Want to try?</button></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    
-
-
-
-    <div id="contact">
-        <div id="contact-left">
-            <h2>Contact <span> Me</span></h2>
-            <h4>Let's Work Together</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam rem illum quas quibusdam explicabo officiis repellendus nemo corporis nobis vitae? Tempora vel veniam similique quidem molestiae ea maxime nesciunt esse.</p>
-            <div class="email"><span><img src="images/Mail.png" alt=""></span> girishnandanwar1@gmail.com</div>
-            <div class="mobile-no"><span><img src="images/Telephone.png" alt=""></span> 8055761297</div>
-            <div class="social">
-                <li class="item">
-                    <a href="#">
-                        <i class="fab fa-github"></i>
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" style="background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);"
+            class="flex flex-col lg:flex-row items-center justify-center text-center lg:text-left py-60 px-4">
+            <div class="space-y-4 mt-20">
+                <h1 class="text-4xl md:text-6xl font-bold">
+                    Hi, I'm <span class="text-indigo-400">Girish Nandanwar</span>
+                </h1>
+                <p class="text-lg md:text-xl">Web developer</p>
+                <p class="text-xl">
+                    I am a Web Developer. <br> Currently persuing B.Tech in Yeshwantrao Chavan College of
+                    Engineering(YCCE),Nagpur
+                </p>
+                <div class="gap-3">
+                    <a href="#contact"
+                        class="inline-block px-6 py-3 mt-4 bg-indigo-500 rounded-full text-white hover:bg-indigo-600">
+                        Contact Me
                     </a>
-                </li>
-                <li class="item">
-                    <a href="#">
-                        <i class="fab fa-instagram"></i>
+                    <a download="Girish_Nandanwar_Resume.pdf" href="GIRISH_NANDANWAR.pdf" title="Download">
+                        <button class="inline-block px-6 py-3 mt-4 ml-3 bg-indigo-500 rounded-full text-white hover:bg-indigo-600">
+                            Resume
+                        </button>
                     </a>
-                </li>
-                <li class="item">
-                    <a href="#">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                </li>
-                <li class="item">
-                    <a href="#">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </li>
+                    
+                </div>
             </div>
-        </div>
+            <div class=" lg:mt-0 lg:ml-12 ">
+                <img src="images/g.png" alt="Profile" class="w-[350px] h-[400px] rounded-full mx-auto lg:mx-0">
+            </div>
+        </section>
 
-        <div id="contact-right">
+        <!-- About Section -->
+        <section id="about" class="bg-gray-900 py-12 text-white">
+            <div class="container mx-auto px-4 lg:px-0 text-center">
+                <h2 class="text-3xl font-bold">About Me</h2>
+                <div class="flex flex-col items-center justify-center lg:flex-row items-center mt-8 space-y-6 lg:space-y-0 lg:space-x-12 ">
+                    
+                    <p class="text-lg leading-relaxed max-w-lg flex ">
+                        Hi, I'm Girish Vijay Nandanwar, a B.Tech student specializing in Computer Technology at YCCE, Nagpur. I’m a passionate developer with experience in web development, data science, and AI. I’ve built innovative solutions like an AI chatbot, a face recognition attendance system, and an e-commerce recommendation system. With strong skills in Python, JavaScript, React, Node.js, and competitive programming, I love tackling challenges and crafting impactful projects. Let's connect and create something amazing!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-12 bg-gradient-to-br from-purple-900 to-indigo-900 text-white">
+            <div class="container mx-auto px-4 lg:px-0 text-center ">
+                <h2 class="text-4xl font-bold mb-8">Skills & Abilities</h2>
+                <div class="flex flex-wrap items-center justify-center gap-6 bg-[#2e1065] rounded-md p-4">
+
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="React" class="h-12 mx-auto mb-1">
+                        <p>React</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="HTML5" class="h-12 mx-auto mb-1">
+                        <p>HTML</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="CSS3" class="h-12 mx-auto mb-1">
+                        <p>CSS</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="JavaScript5" class="h-12 mx-auto mb-1">
+                        <p>JavaScript</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="Netlify" class="h-12 mx-auto mb-1">
+                        <p>Netlify</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="Render" class="h-12 mx-auto mb-1">
+                        <p>Render</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="Figma" class="h-12 mx-auto mb-1">
+                        <p>Figma</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="Tailwind" class="h-12 mx-auto mb-1">
+                        <p>TailwindCSS</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="ChakraUI" class="h-12 mx-auto mb-1">
+                        <p>ChakraUI</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="Bootstrap" class="h-12 mx-auto mb-1">
+                        <p>Bootstrap</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="Firebase" class="h-12 mx-auto mb-1">
+                        <p>Firebase</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="AWS" class="h-12 mx-auto mb-1">
+                        <p>AWS</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="MaterialUI" class="h-12 mx-auto mb-1">
+                        <p>MaterialUI</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="ExpressJS" class="h-12 mx-auto mb-1">
+                        <p>ExpressJS</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="NodeJS" class="h-12 mx-auto mb-1">
+                        <p>NodeJS</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="JAVA" class="h-12 mx-auto mb-1">
+                        <p>JAVA</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="C" class="h-12 mx-auto mb-1">
+                        <p>C</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="C++" class="h-12 mx-auto mb-1">
+                        <p>C++</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="Python" class="h-12 mx-auto mb-1">
+                        <p>Python</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="MySQL" class="h-12 mx-auto mb-1">
+                        <p>MySQL</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="MongoDB" class="h-12 mx-auto mb-1">
+                        <p>MongoDB</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="IMBCloud" class="h-12 mx-auto mb-1">
+                        <p>IMBCloud</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="GIT" class="h-12 mx-auto mb-1">
+                        <p>GIT</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="GitHub" class="h-12 mx-auto mb-1">
+                        <p>GitHub</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="WordPress" class="h-12 mx-auto mb-1">
+                        <p>WordPress</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="SciketLearn" class="h-12 mx-auto mb-1">
+                        <p>SciketLearn</p>
+                    </div>
+                    <div
+                        class="p-4 bg-black rounded-lg shadow-lg hover:shadow-2xl transition-shadow w-[150px] h-[auto] transition-transform transform hover:scale-105">
+                        <img src="images/skills/image.png" alt="Pandas" class="h-12 mx-auto mb-1">
+                        <p>Pandas</p>
+                    </div>
+
+                    <!-- Add more Here -->
 
 
-        </div>
-    </div>
+                </div>
+            </div>
+        </section>
 
 
 
+        <!-- Work Section -->
+        <section id="work" class="py-12 bg-gradient-to-b from-[black]  to-[#3b0764] text-white">
+            <div id="projects" class="mt-[25vh] w-full flex items-center justify-center">
+                <div class="flex flex-col items-center justify-center">
+                    <h1 class="text-4xl font-bold mb-8">My <span class="text-aqua">Projects</span></h1>
+                    <div class="flex flex-wrap w-[80%] justify-around gap-x-[3vw] gap-y-[10vh]">
+
+                        <!-- Project Chat App -->
+                        <div id="ChatApp"
+                            class="flex flex-col items-center justify-center w-[300px] h-[250px] transition-transform transform hover:scale-105">
+                            <div
+                                class="w-full h-[80%] mb-[2vh] flex items-center justify-center rounded-lg shadow-lg bg-white">
+                                <img src="images/chatapp.png" alt="Tic Tac Toe" class="w-[100%] h-[100%] rounded-lg">
+                            </div>
+                            <a target="_blank" href="https://chat-app-1lut.onrender.com">
+                                <button
+                                    class="w-[auto] h-[auto] py-3 px-8 font-bold text-lg rounded-full bg-gradient-to-b from-aqua to-blue-500 shadow-lg shadow-[rgba(255,255,255,0.5)] hover:shadow-xl transition-shadow">
+                                    Chat App
+                                </button>
+                            </a>
+                        </div>
+                        <!-- Project TODO -->
+                        <div id="TODO"
+                            class="flex flex-col items-center justify-center w-[300px] h-[250px] transition-transform transform hover:scale-105">
+                            <div
+                                class="w-full h-[80%] mb-[2vh] flex items-center justify-center rounded-lg shadow-lg bg-white">
+                                <img src="images/todo.png" alt="Project 2" class="w-[100%] h-[100%]  rounded-lg">
+                            </div>
+                            <a target="_blank" href="https://todo-web-app-fhhx.onrender.com">
+                                <button
+                                    class="w-[auto] h-[auto] py-3 px-8 font-bold text-lg rounded-full bg-gradient-to-b from-aqua to-blue-500 shadow-lg shadow-[rgba(255,255,255,0.5)] hover:shadow-xl transition-shadow">
+                                    TODO App
+                                </button>
+                            </a>
+                        </div>
+                        <!-- Project Social Media Analyzer -->
+                        <div id="Social Media Analyzer"
+                            class="flex flex-col items-center justify-center w-[300px] h-[250px] transition-transform transform hover:scale-105">
+                            <div
+                                class="w-full h-[80%] mb-[2vh] flex items-center justify-center rounded-lg shadow-lg bg-white">
+                                <img src="images/social.png" alt="Project 3" class="w-[100%] h-[100%] rounded-lg">
+                            </div>
+                            <a target="_blank" href="https://datadost.onrender.com/chatbot">
+                                <button
+                                    class="w-[auto] h-[auto] py-3 px-5 font-bold text-lg rounded-full bg-gradient-to-b from-aqua to-blue-500 shadow-lg shadow-[rgba(255,255,255,0.5)] hover:shadow-xl transition-shadow">
+                                    Social Media Analyzer
+                                </button>
+                            </a>
+                        </div>
+
+
+                        <!-- Add New Project Here -->
 
 
 
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 
+        <!-- Contact Section -->
+        <section id="contact" class="py-12 bg-gray-900 text-white">
+            <div class="container mx-auto px-4 lg:px-0 text-center">
+                <h2 class="text-3xl font-bold">Contact</h2>
+                <form class="mt-8 max-w-md mx-auto space-y-4">
+                    <input type="text" placeholder="Name" class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white">
+                    <input type="email" placeholder="Email" class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white">
+                    <textarea placeholder="Message" rows="4"
+                        class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white"></textarea>
+                    <button type="submit" class="px-6 py-3 bg-indigo-500 rounded-full hover:bg-indigo-600">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-4 bg-gray-800 text-center text-white">
+        <p>&copy; GTcoder ( Girish Nandanwar ) . All rights reserved.</p>
+    </footer>
 
 
 
-
-
-
-
-
-    
 </body>
-<script src="app.js"></script>
+<script>
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth',
+            });
+        });
+    });
+</script>
+
 </html>
