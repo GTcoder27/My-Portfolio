@@ -89,3 +89,29 @@
 .socials .item:nth-child(4) {
   --bg-color: #000;
 }
+
+
+
+@keyframes scroll-left {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 30s linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scroll-right 30s linear infinite;
+}
+
+.skill-card {
+  @apply p-4 bg-black rounded-lg shadow-lg text-white w-[150px] text-center transition-transform transform hover:scale-105;
+}
+
+
