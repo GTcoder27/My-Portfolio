@@ -8,9 +8,7 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
-
     <title>Portfolio Website</title>
-
 </head>
 
 <body class="min-h-screen text-white ">
@@ -48,24 +46,19 @@
     </header>
 
 
-
-
-
     <!-- MAIN CONTENT -->
     <main>
+
         <!-- Home Section -->
-        <section id="home" style="background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);"
+        <section id="home" style="background: radial-gradient(125% 125% at 50% 10%, #000 40%, rgb(194, 51, 238) 100%);"
             class="flex flex-col lg:flex-row items-center justify-center text-center lg:text-left py-60 px-4">
 
-            <!-- Image Section - Appears first on mobile, second on desktop -->
             <div class="order-1 lg:order-2 lg:mt-0 lg:ml-12 pb-[100px]">
                 <div
                     class="w-[370px] h-[370px] mx-auto lg:mx-0 rounded-full overflow-hidden shadow-lg border-4 border-indigo-500 transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
                     <img src="images/g.png" alt="Profile" class="w-full h-full object-cover">
                 </div>
             </div>
-
-            <!-- Text Content Section - Appears second on mobile, first on desktop -->
             <div class="order-2 lg:order-1 space-y-4 mt-10 lg:mt-0">
                 <h1 class="text-4xl md:text-6xl font-bold">
                     Hi, I'm <span class="text-indigo-400">Girish Nandanwar</span>
@@ -86,7 +79,6 @@
                             <li><a href="#"><i class="fa-brands fa-x-twitter icon"></i></a></li>
                         </ul>
                     </div>
-
                     <a href="#contact"
                         class="inline-block px-6 py-3 mt-4 bg-[#16a34a] rounded-md text-white hover:bg-[#15803d]">
                         Contact Me
@@ -100,9 +92,6 @@
                 </div>
             </div>
         </section>
-
-
-
 
 
         <!-- About Section -->
@@ -122,100 +111,158 @@
                     </p>
                 </div>
             </div>
-
-
-
         </section>
 
 
 
+        <section id="skills" class="py-12 bg-gradient-to-br from-purple-900 to-indigo-900 text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl mb-12 font-bold">Skills <span class="text-[#6ee7b7]">&</span> Abilities</h1>
+
+                <div class="space-y-8 overflow-hidden">
+
+                    <!-- Row 1: Scroll left to right -->
+                    <div class="relative whitespace-nowrap overflow-hidden">
+                        <div class="inline-flex animate-scroll-left will-change-transform">
+                            <!-- First set -->
+                            <div class="flex space-x-6">
+                                <div class="skill-card">React</div>
+                                <div class="skill-card">HTML</div>
+                                <div class="skill-card">CSS</div>
+                                <div class="skill-card">JavaScript</div>
+                                <div class="skill-card">TailwindCSS</div>
+                                <div class="skill-card">NodeJS</div>
+                                <div class="skill-card">MongoDB</div>
+                            </div>
+                            <!-- Duplicate set -->
+                            <div class="flex space-x-6">
+                                <div class="skill-card">React</div>
+                                <div class="skill-card">HTML</div>
+                                <div class="skill-card">CSS</div>
+                                <div class="skill-card">JavaScript</div>
+                                <div class="skill-card">TailwindCSS</div>
+                                <div class="skill-card">NodeJS</div>
+                                <div class="skill-card">MongoDB</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Scroll right to left -->
+                    <div class="relative whitespace-nowrap overflow-hidden">
+                        <div class="inline-flex animate-scroll-right will-change-transform">
+                            <div class="flex space-x-6">
+                                <div class="skill-card">Python</div>
+                                <div class="skill-card">Java</div>
+                                <div class="skill-card">C++</div>
+                                <div class="skill-card">ExpressJS</div>
+                                <div class="skill-card">MySQL</div>
+                                <div class="skill-card">Git</div>
+                                <div class="skill-card">GitHub</div>
+                            </div>
+                            <div class="flex space-x-6">
+                                <div class="skill-card">Python</div>
+                                <div class="skill-card">Java</div>
+                                <div class="skill-card">C++</div>
+                                <div class="skill-card">ExpressJS</div>
+                                <div class="skill-card">MySQL</div>
+                                <div class="skill-card">Git</div>
+                                <div class="skill-card">GitHub</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Scroll left to right -->
+                    <div class="relative whitespace-nowrap overflow-hidden">
+                        <div class="inline-flex animate-scroll-left will-change-transform">
+                            <div class="flex space-x-6">
+                                <div class="skill-card">Firebase</div>
+                                <div class="skill-card">MaterialUI</div>
+                                <div class="skill-card">Netlify</div>
+                                <div class="skill-card">Render</div>
+                                <div class="skill-card">WordPress</div>
+                                <div class="skill-card">Figma</div>
+                                <div class="skill-card">ScikitLearn</div>
+                                <div class="skill-card">Pandas</div>
+                            </div>
+                            <div class="flex space-x-6">
+                                <div class="skill-card">Firebase</div>
+                                <div class="skill-card">MaterialUI</div>
+                                <div class="skill-card">Netlify</div>
+                                <div class="skill-card">Render</div>
+                                <div class="skill-card">WordPress</div>
+                                <div class="skill-card">Figma</div>
+                                <div class="skill-card">ScikitLearn</div>
+                                <div class="skill-card">Pandas</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
 
-<section id="skills" class="py-12 bg-gradient-to-br from-purple-900 to-indigo-900 text-white">
-  <div class="container mx-auto px-4 text-center">
-    <h1 class="text-4xl mb-12 font-bold">Skills <span class="text-[#6ee7b7]">&</span> Abilities</h1>
 
-    <div class="space-y-8 overflow-hidden">
+        <!-- Work Experience -->
+        <section class="bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] py-12 px-6 text-white">
+            <h2 class="text-4xl font-bold mb-4 text-center">Experience</h2>
+            <p class="text-center text-lg text-gray-300 mb-10">
+                My work experience as a software engineer and working on different companies and projects.
+            </p>
 
-      <!-- Row 1: Scroll left to right -->
-      <div class="relative whitespace-nowrap overflow-hidden">
-        <div class="inline-flex animate-scroll-left will-change-transform">
-          <!-- First set -->
-          <div class="flex space-x-6">
-            <div class="skill-card">React</div>
-            <div class="skill-card">HTML</div>
-            <div class="skill-card">CSS</div>
-            <div class="skill-card">JavaScript</div>
-            <div class="skill-card">TailwindCSS</div>
-            <div class="skill-card">NodeJS</div>
-            <div class="skill-card">MongoDB</div>
-          </div>
-          <!-- Duplicate set -->
-          <div class="flex space-x-6">
-            <div class="skill-card">React</div>
-            <div class="skill-card">HTML</div>
-            <div class="skill-card">CSS</div>
-            <div class="skill-card">JavaScript</div>
-            <div class="skill-card">TailwindCSS</div>
-            <div class="skill-card">NodeJS</div>
-            <div class="skill-card">MongoDB</div>
-          </div>
-        </div>
-      </div>
+            <div class="relative max-w-4xl mx-auto">
+                <!-- Vertical timeline line -->
+                <div class="absolute left-6 top-[15%] h-[150px] w-0.5 bg-purple-500"></div>
 
-      <!-- Row 2: Scroll right to left -->
-      <div class="relative whitespace-nowrap overflow-hidden">
-        <div class="inline-flex animate-scroll-right will-change-transform">
-          <div class="flex space-x-6">
-            <div class="skill-card">Python</div>
-            <div class="skill-card">Java</div>
-            <div class="skill-card">C++</div>
-            <div class="skill-card">ExpressJS</div>
-            <div class="skill-card">MySQL</div>
-            <div class="skill-card">Git</div>
-            <div class="skill-card">GitHub</div>
-          </div>
-          <div class="flex space-x-6">
-            <div class="skill-card">Python</div>
-            <div class="skill-card">Java</div>
-            <div class="skill-card">C++</div>
-            <div class="skill-card">ExpressJS</div>
-            <div class="skill-card">MySQL</div>
-            <div class="skill-card">Git</div>
-            <div class="skill-card">GitHub</div>
-          </div>
-        </div>
-      </div>
+                <!-- Experience Item 1 -->
+                <div class="relative pl-16 pb-10">
+                    <!-- Dot -->
+                    <div class="absolute left-4 top-6 w-4 h-4 bg-purple-500 rounded-full border-2 border-white z-10">
+                    </div>
 
-      <!-- Row 3: Scroll left to right -->
-      <div class="relative whitespace-nowrap overflow-hidden">
-        <div class="inline-flex animate-scroll-left will-change-transform">
-          <div class="flex space-x-6">
-            <div class="skill-card">Firebase</div>
-            <div class="skill-card">MaterialUI</div>
-            <div class="skill-card">Netlify</div>
-            <div class="skill-card">Render</div>
-            <div class="skill-card">WordPress</div>
-            <div class="skill-card">Figma</div>
-            <div class="skill-card">ScikitLearn</div>
-            <div class="skill-card">Pandas</div>
-          </div>
-          <div class="flex space-x-6">
-            <div class="skill-card">Firebase</div>
-            <div class="skill-card">MaterialUI</div>
-            <div class="skill-card">Netlify</div>
-            <div class="skill-card">Render</div>
-            <div class="skill-card">WordPress</div>
-            <div class="skill-card">Figma</div>
-            <div class="skill-card">ScikitLearn</div>
-            <div class="skill-card">Pandas</div>
-          </div>
-        </div>
-      </div>
+                    <div class="border border-blue-500 rounded-lg p-6 bg-[#1c1c3a]">
+                        <div class="flex items-center gap-4 mb-2">
+                            <img src="https://internpe.in/images/logo.png" alt="InternPey Logo"
+                                class="w-12 h-12 object-contain rounded-md">
+                            <div>
+                                <h3 class="text-xl font-semibold">Frontend Developer Intern</h3>
+                                <p class="text-sm text-gray-400">InternPey</p>
+                                <p class="text-sm text-gray-400">Aug 2023 – July 2023</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300">Working on Frontend projects</p>
+                        <p class="mt-2 text-sm">
+                            <span class="font-semibold text-white">Skills:</span>
+                            <span class="text-gray-300">• ReactJS • Redux • NodeJs • HTML • CSS • JavaScript</span>
+                        </p>
+                    </div>
+                </div>
 
-    </div>
-  </div>
-</section>
+                <!-- Experience Item 2 -->
+                <div class="relative pl-16 pb-10">
+                    <!-- Dot -->
+                    <div class="absolute left-4 top-6 w-4 h-4 bg-purple-500 rounded-full border-2 border-white z-10">
+                    </div>
+
+                    <div class="border border-blue-500 rounded-lg p-6 bg-[#1c1c3a]">
+                        <div class="flex items-center gap-4 mb-2">
+                            <img src="https://www.codesoft.in/wp-content/uploads/2023/03/logo-new.png"
+                                alt="CodeSoft Logo" class="w-12 h-12 object-contain rounded-md">
+                            <div>
+                                <h3 class="text-xl font-semibold">Frontend Engineer Intern</h3>
+                                <p class="text-sm text-gray-400">CodeSoft</p>
+                                <p class="text-sm text-gray-400">June 2023 – July 2023</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300">Working on the frontend of the web application using ReactJS, Redux</p>
+                        <p class="mt-2 text-sm">
+                            <span class="font-semibold text-white">Skills:</span>
+                            <span class="text-gray-300">• ReactJS • Redux • NodeJs • HTML • CSS • JavaScript</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 
@@ -274,11 +321,87 @@
                         <!-- Add New Project Here -->
 
 
-
                     </div>
                 </div>
             </div>
         </section>
+
+
+        <!-- Education Section -->
+        <section class="bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] py-12 px-6 text-white">
+            <h2 class="text-4xl font-bold mb-4 text-center">Education</h2>
+            <p class="text-center text-lg text-gray-300 mb-10">
+                My academic background and institutions I've attended.
+            </p>
+
+            <div class="relative max-w-4xl mx-auto">
+                <!-- Right side vertical timeline line -->
+                <div class="absolute right-6 top-[9%] h-[25%] bottom-0 w-0.5 bg-purple-500"></div>
+
+                <!-- Education Item 1 -->
+                <div class="relative pr-16 pb-10 text-left">
+                    <!-- Dot -->
+                    <div class="absolute right-4 top-6 w-4 h-4 bg-purple-500 rounded-full border-2 border-white z-10">
+                    </div>
+
+                    <div class="border border-blue-500 rounded-lg p-6 bg-[#1c1c3a]">
+                        <div class="mb-2">
+                            <h3 class="text-xl font-semibold">B.Tech in Computer Technology</h3>
+                            <p class="text-sm text-gray-400">YCCE, Nagpur</p>
+                            <p class="text-sm text-gray-400">2022 – 2026</p>
+                        </div>
+                        <p class="text-gray-300">Pursuing Bachelor’s degree with a focus on AI, Web Dev, and DSA.</p>
+                        <p class="mt-2 text-sm">
+                            <span class="font-semibold text-white">CGPA:</span>
+                            <span class="text-gray-300">8.2</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="absolute right-6 top-[43%] h-[25%] bottom-0 w-0.5 bg-purple-500"></div>
+                
+                <!-- Education Item 2 -->
+                <div class="relative pr-16 pb-10 text-left">
+                    <!-- Dot -->
+                    <div class="absolute right-4 top-6 w-4 h-4 bg-purple-500 rounded-full border-2 border-white z-10">
+                    </div>
+
+                    <div class="border border-blue-500 rounded-lg p-6 bg-[#1c1c3a]">
+                        <div class="mb-2">
+                            <h3 class="text-xl font-semibold">Higher Secondary (HSC)</h3>
+                            <p class="text-sm text-gray-400">Govind Junior College, Palandur</p>
+                            <p class="text-sm text-gray-400">2020 – 2022</p>
+                        </div>
+                        <p class="text-gray-300">Completed HSC with a focus on science stream.</p>
+                        <p class="mt-2 text-sm">
+                            <span class="font-semibold text-white">Percentage:</span>
+                            <span class="text-gray-300">72%</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Education Item 3 -->
+                <div class="relative pr-16 pb-10 text-left">
+                    <!-- Dot -->
+                    <div class="absolute right-4 top-6 w-4 h-4 bg-purple-500 rounded-full border-2 border-white z-10">
+                    </div>
+
+                    <div class="border border-blue-500 rounded-lg p-6 bg-[#1c1c3a]">
+                        <div class="mb-2">
+                            <h3 class="text-xl font-semibold">Secondary (SSC)</h3>
+                            <p class="text-sm text-gray-400">Hyacinth’s Little Flower High School, Lakhani</p>
+                            <p class="text-sm text-gray-400">2010 – 2020</p>
+                        </div>
+                        <p class="text-gray-300">Completed SSC with distinction.</p>
+                        <p class="mt-2 text-sm">
+                            <span class="font-semibold text-white">Percentage:</span>
+                            <span class="text-gray-300">86%</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
 
 
@@ -295,6 +418,7 @@
                 </form>
             </div>
         </section>
+
     </main>
 
     <!-- FOOTER -->
