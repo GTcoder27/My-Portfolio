@@ -1,25 +1,33 @@
 #head a {
-    position: relative;
-    text-decoration: none; /* Remove default underline */
+  position: relative;
+  text-decoration: none;
+  /* Remove default underline */
 }
 
 #head a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px; /* Adjust the position of the underline */
-    width: 100%;
-    height: 2px; /* Thickness of the underline */
-    background-color: rgb(62, 255, 184); /* Use the current text color */
-    transform: scaleX(0); /* Start with no width */
-    transition: transform 0.3s ease; /* Animation for the underline */
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  /* Adjust the position of the underline */
+  width: 100%;
+  height: 2px;
+  /* Thickness of the underline */
+  background-color: rgb(62, 255, 184);
+  /* Use the current text color */
+  transform: scaleX(0);
+  /* Start with no width */
+  transition: transform 0.3s ease;
+  /* Animation for the underline */
 }
 
 #head a:hover::after {
-    transform: scaleX(1); /* Expand the underline on hover */
+  transform: scaleX(1);
+  /* Expand the underline on hover */
 }
+
 #mobile-menu {
-    transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 
@@ -39,6 +47,7 @@
   list-style: none;
   gap: 1.5rem;
 }
+
 .socials .item a {
   text-decoration: none;
   width: 3rem;
@@ -53,53 +62,116 @@
   border: 2px solid #f0f9fe;
   overflow: hidden;
 }
+
 .socials .item a::before {
   content: "";
   position: absolute;
-  width: 100%; 
-  height: 100%; 
+  width: 100%;
+  height: 100%;
   background: var(--bg-color);
   z-index: 0;
   scale: 1 0;
   transform-origin: bottom;
   transition: scale 0.5s ease;
 }
+
 .socials .item:hover a::before {
   scale: 1 1;
 }
+
 .socials .icon {
   font-size: 1.4rem;
   color: hsl(203, 92%, 8%);
   transition: 0.5s ease;
   z-index: 2;
 }
+
 .socials .item a:hover .icon {
   color: #fff;
   transform: rotateX(360deg);
 }
+
 .socials .item:nth-child(1) {
   --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7);
 }
+
 .socials .item:nth-child(2) {
   --bg-color: #0077b5;
 }
+
 .socials .item:nth-child(3) {
   --bg-color: #ff0000;
 }
+
 .socials .item:nth-child(4) {
   --bg-color: #000;
 }
 
 
 
+.typewriter::before {
+  content: "Web Developer";
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #fff;
+  animation:
+    typing 5s steps(14, end),
+    blink 0.7s step-end infinite,
+    erase 5s steps(14, end) 3s,
+    blink 0.7s step-end infinite 6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 14ch;
+  }
+}
+
+@keyframes erase {
+  from {
+    width: 14ch;
+  }
+
+  to {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+
+
+
+
 @keyframes scroll-left {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 @keyframes scroll-right {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .animate-scroll-left {
@@ -113,5 +185,3 @@
 .skill-card {
   @apply p-4 bg-black rounded-lg shadow-lg text-white w-[150px] text-center transition-transform transform hover:scale-105;
 }
-
-
