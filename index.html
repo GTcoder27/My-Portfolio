@@ -5,444 +5,463 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
     <title>Portfolio Website</title>
+    <style>
+        body {
+            font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+            background: #101c2c;
+            color: #fff;
+        }
+    </style>
 </head>
 
-<body class="min-h-screen text-white ">
-
-
+<body class="min-h-screen text-white bg-dark-main">
     <!-- HEADER -->
-    <header id="header" class="py-4 bg-opacity-50 backdrop-blur-md fixed w-full z-10 scroll-smooth shadow-md"
-        style="box-shadow: 0 4px 30px rgba(255, 255, 255, 0.5);">
-        <nav class="container mx-auto flex justify-between items-center px-4 lg:px-0">
-            <a href="#" class="text-2xl font-bold">Girish Nandanwar</a>
-            <!-- Desktop Menu -->
-            <div id="head" class="hidden md:flex space-x-6 font-bold">
-                <a href="#home" class="hover:text-indigo-300">Home</a>
-                <a href="#about" class="hover:text-indigo-300">About</a>
-                <a href="#skills" class="hover:text-indigo-300">Skills</a>
-                <a href="#work" class="hover:text-indigo-300">Work</a>
-                <a href="#contact" class="hover:text-indigo-300">Contact</a>
+    <header id="header"
+        class="header-dark py-5 fixed w-full z-20 bg-gradient-to-r from-blue-900/60 to-purple-900/60 backdrop-blur-md border-b border-gray-800/50">
+        <nav class="container mx-auto flex justify-between items-center px-4 lg:px-6">
+            <a href="#" class="text-2xl font-bold tracking-wider text-cyan-400 ">Girish Nandanwar</a>
+            <div id="head" class="hidden md:flex space-x-10 font-medium text-lg">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#work" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-                <button id="menu-toggle" class="text-2xl">
-                    <i class="fa fa-bars"></i>
-                </button>
-            </div>
+            <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-800/50 transition-all duration-200">
+                <i class="fas fa-bars text-xl text-gray-300 hover:text-white transition-colors"></i>
+            </button>
         </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu"
-            class="fixed top-[264px] right-[-400px] w-[70vw] bg-black shadow-md transform -translate-y-full transition-transform duration-300 md:hidden z-20 ">
-            <a href="#home" class=" block py-2 px-8 ">Home</a>
-            <a href="#about" class="block py-2 px-8 ">About</a>
-            <a href="#skills" class="block py-2 px-8 ">Skills</a>
-            <a href="#work" class="block py-2 px-8 ">Work</a>
-            <a href="#contact" class="block py-2 px-8 ">Contact</a>
-        </div>
     </header>
 
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="hidden fixed top-[68px] left-0 right-0 bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-md z-30 border-b border-gray-800/50">
+        <div class="container mx-auto px-4 py-6">
+            <ul class="space-y-5">
+                <li><a href="#home" class="nav-link block text-center text-lg py-2">Home</a></li>
+                <li><a href="#about" class="nav-link block text-center text-lg py-2">About</a></li>
+                <li><a href="#skills" class="nav-link block text-center text-lg py-2">Skills</a></li>
+                <li><a href="#work" class="nav-link block text-center text-lg py-2">Projects</a></li>
+                <li><a href="#contact" class="nav-link block text-center text-lg py-2">Contact</a></li>
+            </ul>
+        </div>
+    </div>
 
-    <!-- MAIN CONTENT -->
-    <main>
+    <!-- HERO SECTION -->
+    <section id="home"
+        class="hero-dark section-home flex flex-col lg:flex-row items-center justify-center text-left min-h-screen px-4 py-20 sm:py-24 md:py-28 lg:py-32 bg-gradient-to-br from-blue-900/50 to-purple-900/50 backdrop-blur-sm">
 
-        <!-- Home Section -->
-        <section id="home" style="background: radial-gradient(125% 125% at 50% 10%, #000 40%, rgb(118, 0, 154) 100%);"
-            class="flex flex-col lg:flex-row items-center justify-center text-center lg:text-left py-60 px-4 text-white">
-
-            <div class="order-1 lg:order-2 lg:mt-0 lg:ml-12 pb-[100px]">
-                <div
-                    class="w-[370px] h-[370px] mx-auto lg:mx-0 rounded-full overflow-hidden shadow-2xl border-4 border-indigo-500 transition-transform duration-500 hover:scale-105 hover:shadow-purple-600">
-                    <img src="images/g.png" alt="Profile" class="w-full h-full object-cover">
-                </div>
-            </div>
-
-            <div class="order-2 lg:order-1 space-y-5 mt-10 lg:mt-0">
-                <h1 class="text-4xl md:text-6xl font-bold">
-                    Hi, I'm <span class="text-indigo-400">Girish Nandanwar</span>
-                </h1>
-
-                <!-- Typing animation -->
-                <p class="text-xl text-indigo-300">
-                    <span class="typewriter font-mono"></span>
-                </p>
-
-                <p class="text-lg md:text-xl text-gray-200">
-                    I am a passionate Web Developer. <br> Currently pursuing B.Tech at
-                    <span class="text-purple-400 font-semibold">Yeshwantrao Chavan College of Engineering (YCCE),
-                        Nagpur</span>
-                </p>
-
-                <!-- Socials and Buttons -->
-                <div class="gap-5">
-                    <div class="socials my-6 flex items-center justify-center md:justify-start mx-auto">
-                        <ul class="flex gap-4 text-2xl">
-                            <li class="item"><a href="#"><i
-                                        class="fa-brands fa-instagram icon hover:text-pink-500"></i></a></li>
-                            <li class="item"><a href="#"><i
-                                        class="fa-brands fa-linkedin icon hover:text-blue-400"></i></a></li>
-                            <li class="item"><a href="#"><i
-                                        class="fa-brands fa-youtube icon hover:text-red-500"></i></a></li>
-                            <li class="item"><a href="#"><i
-                                        class="fa-brands fa-x-twitter icon hover:text-gray-400"></i></a></li>
-                        </ul>
-                    </div>
-
-                    <a href="#contact"
-                        class="inline-block mr-7 px-8 py-3 text-white font-semibold rounded-full text-center cursor-pointer bg-gradient-to-r from-fuchsia-500 to-purple-700">
-                        Contact Me
-                    </a>
-                    <a download="Girish_Nandanwar_Resume.pdf" href="resume/GIRISH_NANDANWAR.pdf" title="Download"
-                        class="">
-                        <button
-                            class="inline-block px-8 py-3 text-white font-semibold rounded-full text-center cursor-pointer bg-gradient-to-r from-fuchsia-500 to-purple-700">
-                            Check Resume
-                        </button>
-                    </a>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- About Section -->
-        <section id="about" class="bg-gray-900 py-12 text-white">
-            <div class="container mx-auto px-4 lg:px-0 text-center">
-                <h1 class="text-4xl mb-[7vh] font-bold mb-8">About <span class="text-[#6ee7b7]">Me</span></h1>
-                <div
-                    class="flex flex-col items-center justify-center lg:flex-row items-center mt-8 space-y-6 lg:space-y-0 lg:space-x-12 ">
-
-                    <p class="text-lg leading-relaxed max-w-lg flex ">
-                        Hi, I'm Girish Vijay Nandanwar, a B.Tech student specializing in Computer Technology at YCCE,
-                        Nagpur. I’m a passionate developer with experience in web development, data science, and AI.
-                        I’ve built innovative solutions like an AI chatbot, a face recognition attendance system, and an
-                        e-commerce recommendation system. With strong skills in Python, JavaScript, React, Node.js, and
-                        competitive programming, I love tackling challenges and crafting impactful projects. Let's
-                        connect and create something amazing!
-                    </p>
-                </div>
-            </div>
-        </section>
-
-
-
-        <section id="skills" class="py-12 bg-gradient-to-br from-purple-900 to-indigo-900 text-white">
-            <div class="container mx-auto px-4 text-center">
-                <h1 class="text-4xl mb-12 font-bold">Skills <span class="text-[#6ee7b7]">&</span> Abilities</h1>
-
-                <div class="space-y-8 overflow-hidden">
-
-                    <!-- Row 1: Scroll left to right -->
-                    <div class="relative whitespace-nowrap overflow-hidden">
-                        <div class="inline-flex animate-scroll-left will-change-transform">
-                            <!-- First set -->
-                            <div class="flex space-x-6">
-                                <div class="skill-card">React</div>
-                                <div class="skill-card">HTML</div>
-                                <div class="skill-card">CSS</div>
-                                <div class="skill-card">JavaScript</div>
-                                <div class="skill-card">TailwindCSS</div>
-                                <div class="skill-card">NodeJS</div>
-                                <div class="skill-card">MongoDB</div>
-                            </div>
-                            <!-- Duplicate set -->
-                            <div class="flex space-x-6">
-                                <div class="skill-card">React</div>
-                                <div class="skill-card">HTML</div>
-                                <div class="skill-card">CSS</div>
-                                <div class="skill-card">JavaScript</div>
-                                <div class="skill-card">TailwindCSS</div>
-                                <div class="skill-card">NodeJS</div>
-                                <div class="skill-card">MongoDB</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Row 2: Scroll right to left -->
-                    <div class="relative whitespace-nowrap overflow-hidden">
-                        <div class="inline-flex animate-scroll-right will-change-transform">
-                            <div class="flex space-x-6">
-                                <div class="skill-card">Python</div>
-                                <div class="skill-card">Java</div>
-                                <div class="skill-card">C++</div>
-                                <div class="skill-card">ExpressJS</div>
-                                <div class="skill-card">MySQL</div>
-                                <div class="skill-card">Git</div>
-                                <div class="skill-card">GitHub</div>
-                            </div>
-                            <div class="flex space-x-6">
-                                <div class="skill-card">Python</div>
-                                <div class="skill-card">Java</div>
-                                <div class="skill-card">C++</div>
-                                <div class="skill-card">ExpressJS</div>
-                                <div class="skill-card">MySQL</div>
-                                <div class="skill-card">Git</div>
-                                <div class="skill-card">GitHub</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Row 3: Scroll left to right -->
-                    <div class="relative whitespace-nowrap overflow-hidden">
-                        <div class="inline-flex animate-scroll-left will-change-transform">
-                            <div class="flex space-x-6">
-                                <div class="skill-card">Firebase</div>
-                                <div class="skill-card">MaterialUI</div>
-                                <div class="skill-card">Netlify</div>
-                                <div class="skill-card">Render</div>
-                                <div class="skill-card">WordPress</div>
-                                <div class="skill-card">Figma</div>
-                                <div class="skill-card">ScikitLearn</div>
-                                <div class="skill-card">Pandas</div>
-                            </div>
-                            <div class="flex space-x-6">
-                                <div class="skill-card">Firebase</div>
-                                <div class="skill-card">MaterialUI</div>
-                                <div class="skill-card">Netlify</div>
-                                <div class="skill-card">Render</div>
-                                <div class="skill-card">WordPress</div>
-                                <div class="skill-card">Figma</div>
-                                <div class="skill-card">ScikitLearn</div>
-                                <div class="skill-card">Pandas</div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-
-        <!-- Work Experience -->
-        <section class="bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] py-12 px-6 text-white">
-            <h2 class="text-4xl font-bold mb-4 text-center">Experience</h2>
-            <p class="text-center text-lg text-gray-300 mb-10">
-                My work experience as a software engineer and working on different companies and projects.
+        <!-- Text Area -->
+        <div
+            class="flex-1 flex flex-col justify-center items-start gap-4 z-10 mx-auto lg:ml-[100px] max-w-xl text-center lg:text-left">
+            <p class="text-base sm:text-lg font-semibold text-gray-300">Hello, It's Me</p>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">Girish Nandanwar</h1>
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-white">And I'm a
+                <span id="typewriter" class="text-cyan-400"></span>
+            </h2>
+            <p class="text-sm sm:text-base md:text-lg text-gray-400">
+                I'm an AI and ML engineer specializing in computer vision and NLP solutions. I develop intelligent
+                systems that solve real-world problems through machine learning, deep learning, and full-stack
+                development.
             </p>
 
-            <div class="relative max-w-4xl mx-auto">
-                <!-- Vertical timeline line -->
-                <div class="absolute left-6 top-[15%] h-[150px] w-0.5 bg-purple-500"></div>
-
-                <!-- Experience Item 1 -->
-                <div class="relative pl-16 pb-10">
-                    <!-- Dot -->
-                    <div class="absolute left-4 top-6 w-4 h-4 bg-purple-500 rounded-full border-2 border-white z-10">
-                    </div>
-
-                    <div class="border border-blue-500 rounded-lg p-6 bg-[#1c1c3a]">
-                        <div class="flex items-center gap-4 mb-2">
-                            <img src="https://internpe.in/images/logo.png" alt="InternPey Logo"
-                                class="w-12 h-12 object-contain rounded-md">
-                            <div>
-                                <h3 class="text-xl font-semibold">Frontend Developer Intern</h3>
-                                <p class="text-sm text-gray-400">InternPey</p>
-                                <p class="text-sm text-gray-400">Aug 2023 – July 2023</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-300">Working on Frontend projects</p>
-                        <p class="mt-2 text-sm">
-                            <span class="font-semibold text-white">Skills:</span>
-                            <span class="text-gray-300">• ReactJS • Redux • NodeJs • HTML • CSS • JavaScript</span>
-                        </p>
+            <!-- Social Links and Resume -->
+            <div class="flex flex-col gap-4 mt-4 w-full items-center lg:items-start">
+                <!-- Social Icons -->
+                <div class="flex flex-col gap-4 mt-4">
+                    <div class="flex gap-3 sm:gap-4">
+                        <a href="https://github.com/girishnandanwar" target="_blank"
+                            class="social-icon p-2 rounded-full bg-gray-800/50 hover:bg-gray-700 transition-all duration-200">
+                            <i
+                                class="fab fa-github text-lg sm:text-xl text-white hover:text-cyan-400 transition-colors"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/girish-nandanwar" target="_blank"
+                            class="social-icon p-2 rounded-full bg-gray-800/50 hover:bg-gray-700 transition-all duration-200">
+                            <i
+                                class="fab fa-linkedin text-lg sm:text-xl text-white hover:text-cyan-400 transition-colors"></i>
+                        </a>
+                        <a href="mailto:girishnandanwar@gmail.com"
+                            class="social-icon p-2 rounded-full bg-gray-800/50 hover:bg-gray-700 transition-all duration-200">
+                            <i
+                                class="fas fa-envelope text-lg sm:text-xl text-white hover:text-cyan-400 transition-colors"></i>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Experience Item 2 -->
-                <div class="relative pl-16 pb-10">
-                    <!-- Dot -->
-                    <div class="absolute left-4 top-6 w-4 h-4 bg-purple-500 rounded-full border-2 border-white z-10">
-                    </div>
+                    <!-- Resume Download -->
+                    <a href="GIRISH_NANDANWAR.pdf" download
+                        class="flex items-center justify-center gap-2 px-5 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-sm sm:text-base font-medium rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all shadow-lg hover:shadow-xl">
+                        <i class="fas fa-download"></i>
+                        <span>Download Resume</span>
+                    </a>
+                </div>
+            </div>
 
-                    <div class="border border-blue-500 rounded-lg p-6 bg-[#1c1c3a]">
-                        <div class="flex items-center gap-4 mb-2">
-                            <img src="https://www.codesoft.in/wp-content/uploads/2023/03/logo-new.png"
-                                alt="CodeSoft Logo" class="w-12 h-12 object-contain rounded-md">
-                            <div>
-                                <h3 class="text-xl font-semibold">Frontend Engineer Intern</h3>
-                                <p class="text-sm text-gray-400">CodeSoft</p>
-                                <p class="text-sm text-gray-400">June 2023 – July 2023</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-300">Working on the frontend of the web application using ReactJS, Redux</p>
-                        <p class="mt-2 text-sm">
-                            <span class="font-semibold text-white">Skills:</span>
-                            <span class="text-gray-300">• ReactJS • Redux • NodeJs • HTML • CSS • JavaScript</span>
-                        </p>
+            <!-- Profile Image -->
+            <div class="flex-1 flex justify-center items-center mt-10 lg:mt-0">
+                <div
+                    class="relative w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 max-w-full mx-auto">
+                    <div class=" relative z-10 w-full h-full">
+                        <img src="./images/girish.jpg" alt="Profile"
+                            class="w-full h-full object-cover rounded-full shadow-xl sm:shadow">
                     </div>
                 </div>
             </div>
-        </section>
+    </section>
 
 
+    <!-- About Section -->
+    <section id="about" class="section-about bg-gray-900 bg-opacity-80 py-16 text-white glass-section ">
+        <div class="container mx-auto px-4 lg:px-0 text-center">
+            <h2 class="text-4xl font-bold mb-6 tracking-wide">About Me</h2>
+            <div
+                class="flex flex-col items-center justify-center lg:flex-row items-center mt-8 space-y-6 lg:space-y-0 lg:space-x-12">
+                <p class="text-lg leading-relaxed max-w-xl flex">
+                    Hi, I'm Girish Vijay Nandanwar, a B.Tech student specializing in Computer Technology at YCCE,
+                    Nagpur. I'm a passionate AI and ML developer with expertise in computer vision, natural language
+                    processing, and full-stack development. I've built innovative solutions including an AI-powered
+                    assessment platform, adaptive traffic control system using YOLOv8 and reinforcement learning, and
+                    intelligent crop recommendation systems. With strong skills in Python, TensorFlow, PyTorch,
+                    JavaScript, React, and Node.js, I love solving complex problems through AI and creating impactful
+                    applications. Let's connect and build something transformative together!
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" class="section-skills py-16 bg-gradient-to-br from-purple-800 to-indigo-900 text-white">
+        <div class="container mx-auto px-4 lg:px-0 text-center">
+            <div class="flex items-center justify-center mb-8">
+                <span class="inline-flex items-center justify-center bg-indigo-700 rounded-full w-12 h-12 mr-4">
+                    <i class="fas fa-laptop-code text-2xl text-white"></i>
+                </span>
+                <h2 class="text-4xl font-extrabold tracking-wide text-white">
+                    Skills & <span class="text-yellow-400">Abilities</span>
+                </h2>
+            </div>
+            <div
+                class="skills-grid-new grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-5xl mx-auto">
+                <div
+                    class="skill-card-new flex flex-col items-center justify-center bg-[#1a103d] rounded-xl shadow-lg p-6 transition-transform hover:-translate-y-2 hover:shadow-2xl">
+                    <i class="fab fa-react text-5xl text-cyan-400 mb-3"></i>
+                    <span class="text-lg font-semibold">ReactJS</span>
+                </div>
+                <div
+                    class="skill-card-new flex flex-col items-center justify-center bg-[#1a103d] rounded-xl shadow-lg p-6 transition-transform hover:-translate-y-2 hover:shadow-2xl">
+                    <i class="fab fa-node-js text-5xl text-green-400 mb-3"></i>
+                    <span class="text-lg font-semibold">NodeJS</span>
+                </div>
+                <div
+                    class="skill-card-new flex flex-col items-center justify-center bg-[#1a103d] rounded-xl shadow-lg p-6 transition-transform hover:-translate-y-2 hover:shadow-2xl">
+                    <i class="fab fa-js-square text-5xl text-yellow-300 mb-3"></i>
+                    <span class="text-lg font-semibold">JavaScript</span>
+                </div>
+                <div
+                    class="skill-card-new flex flex-col items-center justify-center bg-[#1a103d] rounded-xl shadow-lg p-6 transition-transform hover:-translate-y-2 hover:shadow-2xl">
+                    <i class="fab fa-html5 text-5xl text-orange-400 mb-3"></i>
+                    <span class="text-lg font-semibold">HTML5</span>
+                </div>
+                <div
+                    class="skill-card-new flex flex-col items-center justify-center bg-[#1a103d] rounded-xl shadow-lg p-6 transition-transform hover:-translate-y-2 hover:shadow-2xl">
+                    <i class="fab fa-css3-alt text-5xl text-blue-400 mb-3"></i>
+                    <span class="text-lg font-semibold">CSS3</span>
+                </div>
+                <div
+                    class="skill-card-new flex flex-col items-center justify-center bg-[#1a103d] rounded-xl shadow-lg p-6 transition-transform hover:-translate-y-2 hover:shadow-2xl">
+                    <i class="fab fa-git-alt text-5xl text-orange-500 mb-3"></i>
+                    <span class="text-lg font-semibold">Git</span>
+                </div>
+                <div
+                    class="skill-card-new flex flex-col items-center justify-center bg-[#1a103d] rounded-xl shadow-lg p-6 transition-transform hover:-translate-y-2 hover:shadow-2xl">
+                    <i class="fab fa-github text-5xl text-white mb-3"></i>
+                    <span class="text-lg font-semibold">GitHub</span>
+                </div>
+                <div
+                    class="skill-card-new flex flex-col items-center justify-center bg-[#1a103d] rounded-xl shadow-lg p-6 transition-transform hover:-translate-y-2 hover:shadow-2xl">
+                    <i class="fab fa-android text-5xl text-green-300 mb-3"></i>
+                    <span class="text-lg font-semibold">Android</span>
+                </div>
+                <div
+                    class="skill-card-new flex flex-col items-center justify-center bg-[#1a103d] rounded-xl shadow-lg p-6 transition-transform hover:-translate-y-2 hover:shadow-2xl">
+                    <i class="fab fa-bootstrap text-5xl text-purple-400 mb-3"></i>
+                    <span class="text-lg font-semibold">Bootstrap</span>
+                </div>
+                <div
+                    class="skill-card-new flex flex-col items-center justify-center bg-[#1a103d] rounded-xl shadow-lg p-6 transition-transform hover:-translate-y-2 hover:shadow-2xl">
+                    <i class="fab fa-figma text-5xl text-pink-400 mb-3"></i>
+                    <span class="text-lg font-semibold">Figma</span>
+                </div>
+                <div
+                    class="skill-card-new flex flex-col items-center justify-center bg-[#1a103d] rounded-xl shadow-lg p-6 transition-transform hover:-translate-y-2 hover:shadow-2xl">
+                    <i class="fab fa-aws text-5xl text-yellow-400 mb-3"></i>
+                    <span class="text-lg font-semibold">AWS</span>
+                </div>
+                <div
+                    class="skill-card-new flex flex-col items-center justify-center bg-[#1a103d] rounded-xl shadow-lg p-6 transition-transform hover:-translate-y-2 hover:shadow-2xl">
+                    <i class="fas fa-database text-5xl text-indigo-400 mb-3"></i>
+                    <span class="text-lg font-semibold">MongoDB</span>
+                </div>
+                <div
+                    class="skill-card-new flex flex-col items-center justify-center bg-[#1a103d] rounded-xl shadow-lg p-6 transition-transform hover:-translate-y-2 hover:shadow-2xl">
+                    <i class="fab fa-fire text-5xl text-yellow-400 mb-3"></i>
+                    <span class="text-lg font-semibold">Firebase</span>
+                </div>
+                <div
+                    class="skill-card-new flex flex-col items-center justify-center bg-[#1a103d] rounded-xl shadow-lg p-6 transition-transform hover:-translate-y-2 hover:shadow-2xl">
+                    <i class="fas fa-brain text-5xl text-purple-400 mb-3"></i>
+                    <span class="text-lg font-semibold">TensorFlow</span>
+                </div>
+                <div
+                    class="skill-card-new flex flex-col items-center justify-center bg-[#1a103d] rounded-xl shadow-lg p-6 transition-transform hover:-translate-y-2 hover:shadow-2xl">
+                    <i class="fas fa-fire-alt text-5xl text-orange-400 mb-3"></i>
+                    <span class="text-lg font-semibold">PyTorch</span>
+                </div>
+                <div
+                    class="skill-card-new flex flex-col items-center justify-center bg-[#1a103d] rounded-xl shadow-lg p-6 transition-transform hover:-translate-y-2 hover:shadow-2xl">
+                    <i class="fab fa-python text-5xl text-yellow-200 mb-3"></i>
+                    <span class="text-lg font-semibold">Python</span>
+                </div>
+                <div
+                    class="skill-card-new flex flex-col items-center justify-center bg-[#1a103d] rounded-xl shadow-lg p-6 transition-transform hover:-translate-y-2 hover:shadow-2xl">
+                    <i class="fas fa-robot text-5xl text-blue-300 mb-3"></i>
+                    <span class="text-lg font-semibold">Computer Vision</span>
+                </div>
+                <div
+                    class="skill-card-new flex flex-col items-center justify-center bg-[#1a103d] rounded-xl shadow-lg p-6 transition-transform hover:-translate-y-2 hover:shadow-2xl">
+                    <i class="fas fa-comment-alt text-5xl text-green-400 mb-3"></i>
+                    <span class="text-lg font-semibold">NLP</span>
+                </div>
+                <div
+                    class="skill-card-new flex flex-col items-center justify-center bg-[#1a103d] rounded-xl shadow-lg p-6 transition-transform hover:-translate-y-2 hover:shadow-2xl">
+                    <i class="fas fa-chart-line text-5xl text-cyan-400 mb-3"></i>
+                    <span class="text-lg font-semibold">Data Science</span>
+                </div>
+                <div
+                    class="skill-card-new flex flex-col items-center justify-center bg-[#1a103d] rounded-xl shadow-lg p-6 transition-transform hover:-translate-y-2 hover:shadow-2xl">
+                    <i class="fab fa-docker text-5xl text-blue-400 mb-3"></i>
+                    <span class="text-lg font-semibold">Docker</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-        <!-- Work Section -->
-        <section id="work" class="py-5 bg-gradient-to-b from-[black]  to-[#3b0764] text-white">
-            <div id="projects" class="mt-[5vh] w-full flex items-center justify-center">
-                <div class="flex flex-col items-center justify-center">
-                    <h1 class="text-4xl mb-[7vh] font-bold mb-8">My <span class="text-[#6ee7b7]">Projects</span></h1>
-                    <div class="flex flex-wrap w-[80%] justify-around gap-x-[3vw] gap-y-[10vh]">
-
-                        <!-- Project Chat App -->
-                        <div id="ChatApp"
-                            class="flex flex-col items-center justify-center w-[300px] h-[250px] transition-transform transform hover:scale-105">
-                            <div
-                                class="w-full h-[80%] mb-[2vh] flex items-center justify-center rounded-lg shadow-lg bg-white">
-                                <img src="images/chatapp.png" alt="Tic Tac Toe" class="w-[100%] h-[100%] rounded-lg">
-                            </div>
-                            <a target="_blank" href="https://chat-app-1lut.onrender.com">
-                                <button
-                                    class="w-[auto] h-[auto] py-3 px-8 font-bold text-lg rounded-full bg-gradient-to-b from-aqua to-blue-500 shadow-lg shadow-[rgba(255,255,255,0.5)] hover:shadow-xl transition-shadow">
-                                    Chat App
-                                </button>
-                            </a>
+    <!-- Work Section -->
+    <section id="work" class="section-projects py-16 bg-gradient-to-b from-black to-[#3b0764] text-white">
+        <div id="projects" class="mt-[10vh] w-full flex items-center justify-center">
+            <div class="flex flex-col items-center justify-center w-full">
+                <h1 class="text-4xl font-bold mb-10 tracking-wide">Projects</h1>
+                <p class="text-center text-gray-300 mb-8 max-w-3xl mx-auto">I have worked on a wide range of projects.
+                    From web apps to npm packages and extensions. Here are some of my projects.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full max-w-6xl px-4">
+                    <!-- Project Card: AutoExam -->
+                    <div
+                        class="project-card flex flex-col bg-[#1a1a2e] rounded-xl shadow-lg overflow-hidden max-w-xs mx-auto">
+                        <div class="relative">
+                            <img src="images/chatapp.png" alt="AutoExam" class="w-full h-48 object-cover">
                         </div>
-                        <!-- Project TODO -->
-                        <div id="TODO"
-                            class="flex flex-col items-center justify-center w-[300px] h-[250px] transition-transform transform hover:scale-105">
-                            <div
-                                class="w-full h-[80%] mb-[2vh] flex items-center justify-center rounded-lg shadow-lg bg-white">
-                                <img src="images/todo.png" alt="Project 2" class="w-[100%] h-[100%]  rounded-lg">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold mb-1">AutoExam</h3>
+                            <span class="text-sm text-gray-400 mb-3">AI-powered Online Assessment Platform</span>
+                            <p class="text-gray-300 text-sm mb-4">An intelligent platform that automates exam creation,
+                                administration, and evaluation using AI technologies for educational institutions.</p>
+                            <div class="flex items-center mt-auto">
+                                <a href="https://github.com/girishnandanwar/AutoExam-AI-Assessment-Platform"
+                                    class="ml-auto px-4 py-1 bg-purple-600 hover:bg-purple-700 text-white rounded-md transition-colors">View
+                                    Code</a>
                             </div>
-                            <a target="_blank" href="https://todo-web-app-fhhx.onrender.com">
-                                <button
-                                    class="w-[auto] h-[auto] py-3 px-8 font-bold text-lg rounded-full bg-gradient-to-b from-aqua to-blue-500 shadow-lg shadow-[rgba(255,255,255,0.5)] hover:shadow-xl transition-shadow">
-                                    TODO App
-                                </button>
-                            </a>
                         </div>
-                        <!-- Project Social Media Analyzer -->
-                        <div id="Social Media Analyzer"
-                            class="flex flex-col items-center justify-center w-[300px] h-[250px] transition-transform transform hover:scale-105">
-                            <div
-                                class="w-full h-[80%] mb-[2vh] flex items-center justify-center rounded-lg shadow-lg bg-white">
-                                <img src="images/social.png" alt="Project 3" class="w-[100%] h-[100%] rounded-lg">
+                    </div>
+
+                    <!-- Project Card: Svadhyaya -->
+                    <div
+                        class="project-card flex flex-col bg-[#1a1a2e] rounded-xl shadow-lg overflow-hidden max-w-xs mx-auto">
+                        <div class="relative">
+                            <img src="images/todo.png" alt="Svadhyaya" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold mb-1">Svadhyaya</h3>
+                            <span class="text-sm text-gray-400 mb-3">AI-powered DIY Mission Engine</span>
+                            <p class="text-gray-300 text-sm mb-4">An innovative platform that leverages AI to create
+                                personalized learning paths and missions for self-improvement and skill development.</p>
+                            <div class="flex items-center mt-auto">
+                                <a href="https://github.com/girishnandanwar/Svadhyaya-AI-DIY-Mission-Engine"
+                                    class="ml-auto px-4 py-1 bg-purple-600 hover:bg-purple-700 text-white rounded-md transition-colors">View
+                                    Code</a>
                             </div>
-                            <a target="_blank" href="https://datadost.onrender.com/chatbot">
-                                <button
-                                    class="w-[auto] h-[auto] py-3 px-5 font-bold text-lg rounded-full bg-gradient-to-b from-aqua to-blue-500 shadow-lg shadow-[rgba(255,255,255,0.5)] hover:shadow-xl transition-shadow">
-                                    Social Media Analyzer
-                                </button>
-                            </a>
                         </div>
+                    </div>
 
+                    <!-- Project Card: Adaptive Traffic Control System -->
+                    <div
+                        class="project-card flex flex-col bg-[#1a1a2e] rounded-xl shadow-lg overflow-hidden max-w-xs mx-auto">
+                        <div class="relative">
+                            <img src="images/social.png" alt="Traffic Control System" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold mb-1">Adaptive Traffic Control</h3>
+                            <span class="text-sm text-gray-400 mb-3">AI-powered Traffic Management</span>
+                            <p class="text-gray-300 text-sm mb-4">A system that dynamically adjusts signal timings based
+                                on real-time traffic density analysis using CCTV footage, YOLOv8, and Reinforcement
+                                Learning.</p>
+                            <div class="flex items-center mt-auto">
+                                <a href="https://github.com/girishnandanwar/Adaptive-Traffic-Control-System"
+                                    class="ml-auto px-4 py-1 bg-purple-600 hover:bg-purple-700 text-white rounded-md transition-colors">View
+                                    Code</a>
+                            </div>
+                        </div>
+                    </div>
 
-                        <!-- Add New Project Here -->
+                    <!-- Project Card: Chat App with Voice Features -->
+                    <div
+                        class="project-card flex flex-col bg-[#1a1a2e] rounded-xl shadow-lg overflow-hidden max-w-xs mx-auto">
+                        <div class="relative">
+                            <img src="images/chatapp.png" alt="Chat App" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold mb-1">Voice Chat App</h3>
+                            <span class="text-sm text-gray-400 mb-3">Voice Transcriptor & Translator</span>
+                            <p class="text-gray-300 text-sm mb-4">A modern chat application with advanced voice features
+                                including real-time transcription and translation capabilities for multilingual
+                                communication.</p>
+                            <div class="flex items-center mt-auto">
+                                <a href="https://github.com/girishnandanwar/Chat-App-with-voice-features"
+                                    class="ml-auto px-4 py-1 bg-purple-600 hover:bg-purple-700 text-white rounded-md transition-colors">View
+                                    Code</a>
+                            </div>
+                        </div>
+                    </div>
 
-
+                    <!-- Project Card: Crop Recommendation System -->
+                    <div
+                        class="project-card flex flex-col bg-[#1a1a2e] rounded-xl shadow-lg overflow-hidden max-w-xs mx-auto">
+                        <div class="relative">
+                            <img src="images/todo.png" alt="Crop Recommendation" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold mb-1">Crop Recommendation</h3>
+                            <span class="text-sm text-gray-400 mb-3">AI-based Agricultural Assistant</span>
+                            <p class="text-gray-300 text-sm mb-4">An intelligent system that analyzes soil quality
+                                parameters to recommend the most suitable crops for optimal yield and sustainable
+                                farming practices.</p>
+                            <div class="flex items-center mt-auto">
+                                <a href="https://github.com/girishnandanwar/Crop_Recommendation_System"
+                                    class="ml-auto px-4 py-1 bg-purple-600 hover:bg-purple-700 text-white rounded-md transition-colors">View
+                                    Code</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-
-        <!-- Education Section -->
-        <section class="bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] py-12 px-6 text-white">
-            <h2 class="text-4xl font-bold mb-4 text-center">Education</h2>
-            <p class="text-center text-lg text-gray-300 mb-10">
-                My academic background and institutions I've attended.
-            </p>
-
-            <div class="relative max-w-4xl mx-auto">
-                <!-- Right side vertical timeline line -->
-                <div class="absolute right-6 top-[9%] h-[25%] bottom-0 w-0.5 bg-purple-500"></div>
-
-                <!-- Education Item 1 -->
-                <div class="relative pr-16 pb-10 text-left">
-                    <!-- Dot -->
-                    <div class="absolute right-4 top-6 w-4 h-4 bg-purple-500 rounded-full border-2 border-white z-10">
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact"
+        class="section-contact py-16 bg-gradient-to-br from-blue-900/50 to-purple-900/50 backdrop-blur-sm text-white">
+        <div class="container mx-auto px-4 lg:px-0 text-center">
+            <h2 class="text-4xl font-bold mb-6 tracking-wide">Contact</h2>
+            <div class="max-w-3xl mx-auto bg-[#0f172a]/80 rounded-2xl p-8 shadow-xl border border-gray-800/50">
+                <form class="space-y-6">
+                    <div class="mb-4">
+                        <input type="email" placeholder="Your Email"
+                            class="w-full px-6 py-4 rounded-lg bg-[#131c31] text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition">
                     </div>
-
-                    <div class="border border-blue-500 rounded-lg p-6 bg-[#1c1c3a]">
-                        <div class="mb-2">
-                            <h3 class="text-xl font-semibold">B.Tech in Computer Technology</h3>
-                            <p class="text-sm text-gray-400">YCCE, Nagpur</p>
-                            <p class="text-sm text-gray-400">2022 – 2026</p>
-                        </div>
-                        <p class="text-gray-300">Pursuing Bachelor’s degree with a focus on AI, Web Dev, and DSA.</p>
-                        <p class="mt-2 text-sm">
-                            <span class="font-semibold text-white">CGPA:</span>
-                            <span class="text-gray-300">8.2</span>
-                        </p>
+                    <div class="mb-4">
+                        <input type="text" placeholder="Your Name"
+                            class="w-full px-6 py-4 rounded-lg bg-[#131c31] text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition">
                     </div>
-                </div>
-
-                <div class="absolute right-6 top-[43%] h-[25%] bottom-0 w-0.5 bg-purple-500"></div>
-
-                <!-- Education Item 2 -->
-                <div class="relative pr-16 pb-10 text-left">
-                    <!-- Dot -->
-                    <div class="absolute right-4 top-6 w-4 h-4 bg-purple-500 rounded-full border-2 border-white z-10">
+                    <div class="mb-4">
+                        <input type="text" placeholder="Subject"
+                            class="w-full px-6 py-4 rounded-lg bg-[#131c31] text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition">
                     </div>
-
-                    <div class="border border-blue-500 rounded-lg p-6 bg-[#1c1c3a]">
-                        <div class="mb-2">
-                            <h3 class="text-xl font-semibold">Higher Secondary (HSC)</h3>
-                            <p class="text-sm text-gray-400">Govind Junior College, Palandur</p>
-                            <p class="text-sm text-gray-400">2020 – 2022</p>
-                        </div>
-                        <p class="text-gray-300">Completed HSC with a focus on science stream.</p>
-                        <p class="mt-2 text-sm">
-                            <span class="font-semibold text-white">Percentage:</span>
-                            <span class="text-gray-300">72%</span>
-                        </p>
+                    <div class="mb-6">
+                        <textarea placeholder="Message" rows="6"
+                            class="w-full px-6 py-4 rounded-lg bg-[#131c31] text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition"></textarea>
                     </div>
-                </div>
-
-                <!-- Education Item 3 -->
-                <div class="relative pr-16 pb-10 text-left">
-                    <!-- Dot -->
-                    <div class="absolute right-4 top-6 w-4 h-4 bg-purple-500 rounded-full border-2 border-white z-10">
-                    </div>
-
-                    <div class="border border-blue-500 rounded-lg p-6 bg-[#1c1c3a]">
-                        <div class="mb-2">
-                            <h3 class="text-xl font-semibold">Secondary (SSC)</h3>
-                            <p class="text-sm text-gray-400">Hyacinth’s Little Flower High School, Lakhani</p>
-                            <p class="text-sm text-gray-400">2010 – 2020</p>
-                        </div>
-                        <p class="text-gray-300">Completed SSC with distinction.</p>
-                        <p class="mt-2 text-sm">
-                            <span class="font-semibold text-white">Percentage:</span>
-                            <span class="text-gray-300">86%</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-12 bg-gray-900 text-white">
-            <div class="container mx-auto px-4 lg:px-0 text-center">
-                <h1 class="text-4xl mb-[7vh] font-bold mb-8">Contact <span class="text-[#6ee7b7]">Me</span></h1>
-                <form class="mt-8 max-w-md mx-auto space-y-4">
-                    <input type="text" placeholder="Name" class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white">
-                    <input type="email" placeholder="Email" class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white">
-                    <textarea placeholder="Message" rows="4"
-                        class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white"></textarea>
-                    <button type="submit" class="px-6 py-3 bg-indigo-500 rounded-full hover:bg-indigo-600">Send</button>
+                    <button type="submit"
+                        class="w-full px-6 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg text-white font-bold text-lg shadow-lg transition-all duration-300">Send</button>
                 </form>
             </div>
-        </section>
-
+        </div>
+    </section>
     </main>
 
     <!-- FOOTER -->
-    <footer class="py-4 bg-gray-800 text-center text-white">
+    <footer class="py-6 bg-gray-800 bg-opacity-90 text-center text-white flex flex-col items-center gap-2">
+        <div class="flex gap-4 justify-center mb-2">
+            <a href="https://github.com/girishnandanwar" target="_blank"
+                class="text-xl hover:text-indigo-400 transition"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/girish-nandanwar" target="_blank"
+                class="text-xl hover:text-indigo-400 transition"><i class="fab fa-linkedin"></i></a>
+            <a href="https://kaggle.com/girishnandanwar" target="_blank"
+                class="text-xl hover:text-indigo-400 transition"><i class="fab fa-kaggle"></i></a>
+            <a href="mailto:girishnandanwar@gmail.com" class="text-xl hover:text-indigo-400 transition"><i
+                    class="fas fa-envelope"></i></a>
+        </div>
         <p>&copy; GTcoder ( Girish Nandanwar ) . All rights reserved.</p>
     </footer>
 
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth',
+                });
+            });
+        });
 
+        // Typewriter effect for job title
+        const typewriter = document.getElementById('typewriter');
+        const titles = ["AI Engineer", "ML Developer", "Full Stack Developer", "Computer Vision Specialist", "NLP Engineer"];
+        let titleIndex = 0, charIndex = 0, isDeleting = false;
+        function type() {
+            const current = titles[titleIndex];
+            if (isDeleting) {
+                typewriter.textContent = current.substring(0, charIndex--);
+                if (charIndex < 0) {
+                    isDeleting = false;
+                    titleIndex = (titleIndex + 1) % titles.length;
+                    setTimeout(type, 500);
+                } else {
+                    setTimeout(type, 50);
+                }
+            } else {
+                typewriter.textContent = current.substring(0, charIndex++);
+                if (charIndex > current.length) {
+                    isDeleting = true;
+                    setTimeout(type, 1200);
+                } else {
+                    setTimeout(type, 100);
+                }
+            }
+        }
+        type();
 
+        // Spinner logic for profile image
+        const profileImg = document.getElementById('profileImg');
+        const profileSpinner = document.getElementById('profileSpinner');
+        if (profileImg && profileSpinner) {
+            profileSpinner.style.display = 'block';
+            profileImg.onload = () => { profileSpinner.style.display = 'none'; };
+            if (profileImg.complete) profileSpinner.style.display = 'none';
+        }
+        // Spinner logic for project images
+        const projectImgs = document.querySelectorAll('.project-img');
+        projectImgs.forEach(img => {
+            const spinner = img.parentElement.querySelector('.img-spinner');
+            if (spinner) spinner.style.display = 'block';
+            img.onload = () => { if (spinner) spinner.style.display = 'none'; };
+            if (img.complete && spinner) spinner.style.display = 'none';
+        });
+    </script>
 </body>
-<script src="app.js"></script>
 
 </html>
