@@ -1,4 +1,4 @@
-/* ========================================
+﻿/* ========================================
    CSS RESET & VARIABLES
 ========================================= */
 *,
@@ -877,89 +877,6 @@ footer,
 }
 
 /* ========================================
-   SKILLS SECTION
-========================================= */
-.skills-section {
-  padding: 8rem 0;
-  position: relative;
-  background: rgba(11, 8, 32, 0.55);
-  overflow: hidden;
-}
-
-.skills-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-cyan), var(--accent-purple), transparent);
-}
-
-#skills-canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  opacity: 0.4;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1.2rem;
-}
-
-.skill-card {
-  padding: 1.5rem 1rem;
-  text-align: center;
-  transition: all 0.3s ease;
-  cursor: default;
-  border-radius: 16px;
-}
-
-.skill-card:hover {
-  border-color: rgba(0, 245, 212, 0.3);
-  box-shadow: 0 8px 30px rgba(0, 245, 212, 0.1), var(--shadow-glow);
-}
-
-.skill-icon {
-  font-size: 2.5rem;
-  margin-bottom: 0.75rem;
-  display: block;
-  filter: drop-shadow(0 0 10px currentColor);
-}
-
-.skill-name {
-  display: block;
-  font-family: var(--font-main);
-  font-weight: 600;
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.75rem;
-}
-
-.skill-bar {
-  width: 100%;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 99px;
-  overflow: hidden;
-}
-
-.skill-fill {
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));
-  border-radius: 99px;
-  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 0 10px var(--accent-cyan);
-}
-
-/* ========================================
    PROJECTS SECTION
 ========================================= */
 .projects-section {
@@ -1023,6 +940,248 @@ footer,
 
 .project-card:hover .project-img {
   transform: scale(1.08);
+}
+
+/* ---- Project Visual Banners (replaces images) ---- */
+.project-visual {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+/* Per-project gradient themes */
+.pv-traffic {
+  background: linear-gradient(135deg, #0f2027, #1a3a2a, #0d3327);
+}
+
+.pv-madat {
+  background: linear-gradient(135deg, #1a0533, #2d1060, #0f0826);
+}
+
+.pv-agent {
+  background: linear-gradient(135deg, #041428, #0a2d4a, #061e3a);
+}
+
+.pv-publiic {
+  background: linear-gradient(135deg, #1a1400, #2e2200, #141000);
+}
+
+.pv-svadh {
+  background: linear-gradient(135deg, #001a2e, #003050, #001020);
+}
+
+.pv-coffee {
+  background: linear-gradient(135deg, #1a0d00, #301500, #200e00);
+}
+
+.pv-chat {
+  background: linear-gradient(135deg, #001a1a, #002e2e, #001e1e);
+}
+
+/* Glow orb behind icons */
+.pv-bg-glow {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.55;
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.pv-traffic .pv-bg-glow {
+  background: rgba(52, 211, 153, 0.7);
+}
+
+.pv-madat .pv-bg-glow {
+  background: rgba(167, 139, 250, 0.7);
+}
+
+.pv-agent .pv-bg-glow {
+  background: rgba(56, 189, 248, 0.7);
+}
+
+.pv-publiic .pv-bg-glow {
+  background: rgba(251, 191, 36, 0.7);
+}
+
+.pv-svadh .pv-bg-glow {
+  background: rgba(59, 130, 246, 0.7);
+}
+
+.pv-coffee .pv-bg-glow {
+  background: rgba(234, 179, 8, 0.7);
+}
+
+.pv-chat .pv-bg-glow {
+  background: rgba(0, 245, 212, 0.7);
+}
+
+.project-card:hover .pv-bg-glow {
+  opacity: 0.85;
+  transform: scale(1.3);
+}
+
+/* Icon container */
+.pv-icons {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Central main icon */
+.pv-icon-main {
+  font-size: 3.5rem;
+  filter: drop-shadow(0 0 12px currentColor);
+  transition: transform 0.4s ease;
+}
+
+.pv-traffic .pv-icon-main {
+  color: #34d399;
+}
+
+.pv-madat .pv-icon-main {
+  color: #a78bfa;
+}
+
+.pv-agent .pv-icon-main {
+  color: #38bdf8;
+}
+
+.pv-publiic .pv-icon-main {
+  color: #fbbf24;
+}
+
+.pv-svadh .pv-icon-main {
+  color: #60a5fa;
+}
+
+.pv-coffee .pv-icon-main {
+  color: #eab308;
+}
+
+.pv-chat .pv-icon-main {
+  color: #00f5d4;
+}
+
+.project-card:hover .pv-icon-main {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+/* Floating small icons */
+.pv-icon-float {
+  position: absolute;
+  font-size: 1.1rem;
+  opacity: 0.45;
+  transition: opacity 0.3s;
+}
+
+.pv-traffic .pv-icon-float {
+  color: #6ee7b7;
+}
+
+.pv-madat .pv-icon-float {
+  color: #c4b5fd;
+}
+
+.pv-agent .pv-icon-float {
+  color: #7dd3fc;
+}
+
+.pv-publiic .pv-icon-float {
+  color: #fde68a;
+}
+
+.pv-svadh .pv-icon-float {
+  color: #93c5fd;
+}
+
+.pv-coffee .pv-icon-float {
+  color: #fef08a;
+}
+
+.pv-chat .pv-icon-float {
+  color: #5eead4;
+}
+
+.project-card:hover .pv-icon-float {
+  opacity: 0.75;
+}
+
+/* Float positions */
+.pf1 {
+  top: 18%;
+  left: 16%;
+  animation: pv-float 3.2s ease-in-out infinite;
+}
+
+.pf2 {
+  top: 20%;
+  right: 16%;
+  animation: pv-float 3.8s ease-in-out infinite 0.6s;
+}
+
+.pf3 {
+  bottom: 22%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: pv-float 3.5s ease-in-out infinite 1.2s;
+}
+
+@keyframes pv-float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.pf3 {
+  animation: pv-float3 3.5s ease-in-out infinite 1.2s;
+}
+
+@keyframes pv-float3 {
+
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-8px);
+  }
+}
+
+/* Tech label at bottom */
+.pv-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: var(--font-main);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  z-index: 3;
 }
 
 .project-overlay {

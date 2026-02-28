@@ -180,7 +180,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
 // 6. TYPEWRITER EFFECT
 // ============================================================
 const typeEl = document.getElementById('typewriter');
-const titles = ['AI Engineer', 'ML Developer', 'Full Stack Dev', 'Computer Vision Expert', 'NLP Engineer'];
+const titles = ['Competetive Programmer', 'AI Engineer', 'Full Stack Dev', 'Computer Vision Expert'];
 let tIdx = 0, cIdx = 0, deleting = false;
 
 function typeWrite() {
@@ -239,12 +239,13 @@ const skillObserver = new IntersectionObserver(entries => {
         if (entry.isIntersecting) {
             document.querySelectorAll('.skill-fill').forEach(fill => {
                 const w = fill.getAttribute('data-width');
-                setTimeout(() => { fill.style.width = w + '%'; }, 200);
+                // Delay long enough for GSAP card entrance animation to run first
+                setTimeout(() => { fill.style.width = w + '%'; }, 800);
             });
             skillObserver.disconnect();
         }
     });
-}, { threshold: 0.2 });
+}, { threshold: 0.3 });
 
 const skillsSection = document.getElementById('skills');
 if (skillsSection) skillObserver.observe(skillsSection);
@@ -280,11 +281,19 @@ window.addEventListener('load', () => {
         opacity: 0, x: 50, duration: 0.9, ease: 'power3.out', delay: 0.2
     });
 
-    // Skill cards stagger
-    gsap.from('.skill-card', {
-        scrollTrigger: { trigger: '.skills-grid', start: 'top 80%' },
-        opacity: 0, y: 30, scale: 0.9, stagger: 0.06, duration: 0.6, ease: 'back.out(1.5)'
-    });
+    // Skill cards stagger — use fromTo so cards always end at fully visible state
+    gsap.fromTo('.skill-card',
+        { opacity: 0, y: 30, scale: 0.9 },
+        {
+            opacity: 1, y: 0, scale: 1,
+            stagger: 0.06, duration: 0.6, ease: 'back.out(1.5)',
+            scrollTrigger: {
+                trigger: '.skills-grid',
+                start: 'top 85%',
+                once: true,
+            }
+        }
+    );
 
     // Project cards – BIDIRECTIONAL slide from left
     // Each card gets its own ScrollTrigger so they animate independently on scroll direction
@@ -332,6 +341,9 @@ window.addEventListener('load', () => {
         scrollTrigger: { trigger: '.coding-banner', start: 'top 85%' },
         opacity: 0, y: 30, duration: 0.8, ease: 'power3.out'
     });
+
+    // Refresh all ScrollTriggers after full page load so positions are correct
+    ScrollTrigger.refresh();
 });
 
 // ============================================================
